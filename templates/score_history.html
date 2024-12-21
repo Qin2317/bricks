@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Score History</title>
+</head>
+
+<body>
+    <h1>Score History</h1>
+    <ul>
+        {% for player in players %}
+        <li>{{ player.name }}:
+            <ul>
+                {% for score in player.scores %}
+                <li>{{ score.score }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
